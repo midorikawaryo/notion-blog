@@ -68,6 +68,10 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
+.postPreview a:hover {
+  cursor: pointer;
+}
+
 .postInfoWrapper {
   display: flex;
   align-items: center;
