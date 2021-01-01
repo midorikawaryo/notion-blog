@@ -76,12 +76,17 @@ export default ({ posts = [], preview }) => {
                   </div>
                 </Link>
               </h3>
-              {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
-              )}
-              {post.Date && (
-                <div className="posted">🗓{getDateStr(post.Date)}</div>
-              )}
+              <div className={blogStyles.postInfoWrapper}>
+                👉
+                {post.Date && (
+                  <div className={blogStyles.postInfo}>
+                    🗓 {getDateStr(post.Date)}
+                  </div>
+                )}
+                {post.Tag && (
+                  <div className={blogStyles.postInfo}>🔖 {post.Tag}</div>
+                )}
+              </div>
               <p>
                 {(!post.preview || post.preview.length === 0) &&
                   'No preview available'}
