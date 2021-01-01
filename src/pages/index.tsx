@@ -7,7 +7,7 @@ import sharedStyles from '../styles/shared.module.css'
 import { getBlogLink, getDateStr, postIsPublished } from '../lib/blog-helpers'
 import { textBlock } from '../lib/notion/renderers'
 import getNotionUsers from '../lib/notion/getNotionUsers'
-import getBlogIndex from '../lib/notion/getBlogIndex'
+import getBlogIndex from '../lib/notion/getIndex'
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
@@ -67,7 +67,7 @@ export default ({ posts = [], preview }) => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
               <h3>
-                <Link href="/[slug]" as={getBlogLink(post.Slug)}>
+                <Link href="/${slug}" as={getBlogLink(post.Slug)}>
                   <div className={blogStyles.titleContainer}>
                     {!post.Published && (
                       <span className={blogStyles.draftBadge}>Draft</span>

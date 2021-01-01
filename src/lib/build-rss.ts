@@ -3,7 +3,7 @@ import { writeFile } from './fs-helpers'
 import { renderToStaticMarkup } from 'react-dom/server'
 
 import { textBlock } from './notion/renderers'
-import getBlogIndex from './notion/getBlogIndex'
+import getBlogIndex from './notion/getIndex'
 import getNotionUsers from './notion/getNotionUsers'
 import { postIsPublished, getBlogLink } from './blog-helpers'
 
