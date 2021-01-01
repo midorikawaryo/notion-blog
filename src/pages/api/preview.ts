@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import getPageData from '../../lib/notion/getPageData'
-import getBlogIndex from '../../lib/notion/getBlogIndex'
+import getBlogIndex from '../../lib/notion/getIndex'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (typeof req.query.token !== 'string') {
@@ -17,6 +17,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   res.setPreviewData({})
-  res.writeHead(307, { Location: `/blog` })
+  res.writeHead(307, { Location: `/` })
   res.end()
 }
