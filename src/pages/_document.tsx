@@ -5,8 +5,8 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="ja">
-        <Head
-          {...(existsGaId ? (
+        <Head>
+          {existsGaId ? (
             <>
               <script
                 async
@@ -24,8 +24,8 @@ class MyDocument extends Document {
                 }}
               />
             </>
-          ) : null)}
-        />
+          ) : null}
+        </Head>
         <body>
           <Main />
           <NextScript />
