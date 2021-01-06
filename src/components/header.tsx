@@ -20,7 +20,7 @@ export default ({ titlePre = '' }) => {
         <title>{titlePre ? `${titlePre} |` : ''} 凡人のメモとログ</title>
         <meta
           name="description"
-          content="An example Next.js site using Notion for the blog"
+          content="凡人のメモとログです。エンジニアとして学んだ技術や読んだ本などを書いています。"
         />
         <meta name="og:title" content="凡人のメモとログ" />
         <meta property="og:image" content={ogImageUrl} />
