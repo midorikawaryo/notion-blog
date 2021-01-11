@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { existsGaId, GA_TRACKING_ID } from '../lib/gtag'
+import { existsGaId } from '../lib/gtag'
+
+const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID
 
 class MyDocument extends Document {
   render() {
