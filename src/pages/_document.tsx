@@ -1,8 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { existsGaId } from '../lib/gtag'
 
-const GA_TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID
-
 class MyDocument extends Document {
   render() {
     return (
@@ -12,7 +10,7 @@ class MyDocument extends Document {
             <>
               <script
                 async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                src={`https://www.googletagmanager.com/gtag/js?id=G-MJVC7JQFMJ`}
               />
               <script
                 dangerouslySetInnerHTML={{
@@ -20,7 +18,7 @@ class MyDocument extends Document {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
+                  gtag('config', 'G-MJVC7JQFMJ', {
                     page_path: window.location.pathname,
                   });`,
                 }}
