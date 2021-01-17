@@ -1,11 +1,11 @@
 import Header from '../components/header'
 
-import aboutStyles from '../styles/about.module.css'
+import sharedStyles from '../styles/shared.module.css'
 
 export default () => (
   <>
     <Header titlePre="プロフィール" />
-    <div className={aboutStyles.layout}>
+    <div className={sharedStyles.layout}>
       <h1>プロフィール</h1>
       <img src="/prof.png" alt="プロフィール画像" />
       <h2>ろい</h2>
